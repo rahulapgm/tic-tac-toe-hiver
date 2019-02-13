@@ -5,10 +5,9 @@
 }
 
 .gridTop{
-    border-color: "#f44336";
-    border: '1px solid red';
     display: flex;
     flex-direction: column;
+	box-shadow:0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
 }
 
 .lightBackground {
@@ -41,7 +40,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 .cross{
@@ -59,11 +58,13 @@
 .restartGame{
 	display: flex;
     justify-content: center;
+	padding:24px;
 }
 #gameAction{
-	width:200px;
+	width:120px;
+	padding:8px;
 	text-decoration:none;
 	text-align:center;
-	border:1px solid black;
-	margin:12px;
+	color:black;
+	box-shadow:0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
 }

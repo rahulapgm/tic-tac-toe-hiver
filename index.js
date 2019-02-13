@@ -42,18 +42,18 @@ function showWinner(colIdx, rowIdx){
 		let winner="";
 		let colArr= [];
 		
-		//Checking Row elements are equal
+		//Checking whether row elements are equal
 		isWinnerPredicted = grid[colIdx].every( v => v === grid[colIdx][rowIdx] );
 		winner = isWinnerPredicted ? winners[grid[colIdx][rowIdx]] : "";
 		
-		//Checking Column elements are equal
+		//Checking whether column elements are equal
 		if(!isWinnerPredicted){
 			colArr = grid.map(x=> x[rowIdx]);
 			isWinnerPredicted = colArr.every( v => v === grid[colIdx][rowIdx] );
 			winner = isWinnerPredicted ? winners[colArr[0]] : "";
 		}
 		
-		//Checking Diagonals elements are equal
+		//Checking whether diagonals elements are equal
 		if(!isWinnerPredicted){
 			if(diagonals.includes(colIdx+rowIdx)){
 				diagonals[colIdx] = grid[colIdx][rowIdx];
@@ -136,8 +136,6 @@ function addClickHandlers() {
         boxes[idx].addEventListener('click', onBoxClick, false);
     }
 }
-
-
 
 initializeGrid();
 renderMainGrid();
